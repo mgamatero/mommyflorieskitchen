@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.text-lato{
+  font-family: 'Lato',sans-serif;
+  font-size: 2.5rem;
+  color: rgb(49, 21, 21);
+}
+.text-nunito{
+  font-family: 'Nunito',sans-serif;
+  font-size: 2.5rem;
+  color: rgb(43, 31, 31);
+}
