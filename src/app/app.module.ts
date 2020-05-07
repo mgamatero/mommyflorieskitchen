@@ -14,6 +14,8 @@ import { GalleryComponent } from './components/page-landing/gallery/gallery.comp
 import { ThisWeekComponent } from './components/page-landing/this-week/this-week.component';
 import { PageCateringMenuComponent } from './components/page-catering-menu/page-catering-menu.component';
 import { PageSingleTrayMenuComponent } from './components/page-single-tray-menu/page-single-tray-menu.component';
+import { PageGalleryComponent } from './components/page-gallery/page-gallery.component';
+import { CateringComponent } from './components/page-landing/catering/catering.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PageSingleTrayMenuComponent } from './components/page-single-tray-menu/
     GalleryComponent,
     ThisWeekComponent,
     PageCateringMenuComponent,
-    PageSingleTrayMenuComponent
+    PageSingleTrayMenuComponent,
+    PageGalleryComponent,
+    CateringComponent
   ],
   imports: [
     BrowserModule,
