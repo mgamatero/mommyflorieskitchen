@@ -9,7 +9,7 @@
 }
 
 .header-text {
-  font-family: "Nunito", sans-serif;
+  font-family: "Dancing Script", cursive;
   font-weight: bolder;
   font-size: 7rem;
   padding:1rem;
@@ -41,6 +41,6 @@ color: rgb(58, 33, 4);
 }
 @media only screen and (max-width: 450px) {
   .header-text {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
   }
 }
