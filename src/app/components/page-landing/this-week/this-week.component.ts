@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseFBService} from '../../../services/database-fb.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-this-week',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThisWeekComponent implements OnInit {
 
-  constructor() { }
+weeklyDate$: any [];
+
+  constructor(private db:DatabaseFBService) { }
 
   ngOnInit(): void {
+this.db.dbRetrieveText().subscribe(text=>{
+this.weeklyDate$ = text.map((e)=>{
+  return{
+    id:e.payload.doc.id,
+  ...(e.payload.doc.data() as any)  }
+})
+})
   }
 
 }

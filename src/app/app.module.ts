@@ -27,6 +27,8 @@ import { CateringComponent } from './components/page-landing/catering/catering.c
 import { ContactInfoComponent } from './components/page-landing/contact-info/contact-info.component';
 import { FooterComponent } from './components/footer/footer.component';
 
+import {DatabaseFBService} from './services/database-fb.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +61,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DatabaseFBService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
