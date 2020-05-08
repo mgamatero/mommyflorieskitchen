@@ -6,6 +6,7 @@ import {
   Validators,
   FormArray,
 } from '@angular/forms';
+import{DatabaseFBService} from '../../services/database-fb.service';
 
 @Component({
   selector: 'app-page-admin',
@@ -13,14 +14,19 @@ import {
   styleUrls: ['./page-admin.component.css'],
 })
 export class PageAdminComponent implements OnInit {
+  ulamTextForm: FormGroup;
   ulamForm1: FormGroup;
   ulamForm2: FormGroup;
   text: any;
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private dbService:DatabaseFBService) {}
 
   ngOnInit(): void {
+
+    this.ulamTextForm = this.formBuilder.group({
+      ulamDate:['']
+    })
+
     this.ulamForm1 = this.formBuilder.group({
-      weekName: [''],
       ulamName: [''],
       ulamImage: [''],
       ulamPrice: [''],
@@ -37,9 +43,13 @@ export class PageAdminComponent implements OnInit {
 
   clearForms(){
     this.ulamForm1.reset();
-    console.log(
-      'clear'
-    )
     this.ulamForm2.reset();
+  }
+
+  addFromForm(){
+
+    this.dbService.addUlam(this.ulamForm1.value,'ulam1');
+    this.dbService.addUlam(this.ulamForm2.value,'ulam2');
+    this.dbService.addText(this.ulamTextForm.value);
   }
 }

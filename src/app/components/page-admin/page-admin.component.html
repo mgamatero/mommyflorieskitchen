@@ -6,12 +6,14 @@
     <div class="edit-weekly p-2">
       <div class="row">
         <div class="col-md-6">
-          <form [formGroup]="ulamForm1" class="add-ulam-form">
+          <form [formGroup]="ulamTextForm" class="ulamTextForm">
             <div class="form-group">
-              <label for="weekName">Weekly Ala Carte for Week</label>
-              <input type="text" formControlName="weekName" class="form-control" id="weekName"
-                aria-describedby="weekName" placeholder="Date">
+              <label for="ulamDate">Weekly Ala Carte for Week</label>
+              <input type="text" formControlName="ulamDate" class="form-control" id="ulamDate"
+                aria-describedby="ulamDate" placeholder="Date">
             </div>
+          </form>
+          <form [formGroup]="ulamForm1" class="add-ulam-form">
             <div class="form-group">
               <label for="ulamImage">Image URL1</label>
               <input type="text" formControlName="ulamImage" class="form-control" id="ulamImage"
@@ -57,13 +59,13 @@
                 aria-describedby="ulamSize" placeholder="32oz, etc">
             </div>
           </form>
-          <button class="btn btn-primary btn-block m-1">Submit</button>
+          <button class="btn btn-primary btn-block m-1" (click)="addFromForm()">Submit</button>
           <button class="btn btn-danger btn-block m-1" (click)="clearForms()">Clear Form</button>
         </div>
 
         <div class="col-md-6 preview-section">
           <h4 class="this-week-text text-nunito text-center p-3">Weekly A La Carte Menu for
-            {{ulamForm1.value.weekName}}:</h4>
+            {{ulamTextForm.value.ulamDate}}:</h4>
           <div class="row text-nunito weekly-menu">
             <div class="col-md-6 text-center p-1">
               <div class="card text-center">

@@ -18,4 +18,35 @@ export class DatabaseFBService {
   dbRetrieveText(){
     return this.db.collection('weeklytext').snapshotChanges();
   }
+
+
+
+
+   //------------------------------  add Text ---------------------------------------
+   addText(textFromForm: any) {
+    // workaround for empty doc issue
+    // const id = this.afs.createId();
+    this.db
+      .collection('weeklytext')
+      .doc('text')
+      .set(textFromForm as any)
+      .then(() => {
+        alert(`Week updated`);
+      });
+  }
+
+
+
+   //------------------------------  add Ulam ---------------------------------------
+   addUlam(ulamFromForm: any,docname:string) {
+    // workaround for empty doc issue
+    // const id = this.afs.createId();
+    this.db
+      .collection('weeklyulam')
+      .doc(docname)
+      .set(ulamFromForm as any)
+      .then(() => {
+        alert(`Ulam added`);
+      });
+  }
 }
