@@ -28,6 +28,7 @@ import { ContactInfoComponent } from './components/page-landing/contact-info/con
 import { FooterComponent } from './components/footer/footer.component';
 
 import {DatabaseFBService} from './services/database-fb.service';
+import { PageAdminComponent } from './components/page-admin/page-admin.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {DatabaseFBService} from './services/database-fb.service';
     PageGalleryComponent,
     CateringComponent,
     ContactInfoComponent,
-    FooterComponent
+    FooterComponent,
+    PageAdminComponent
   ],
   imports: [
     BrowserModule,

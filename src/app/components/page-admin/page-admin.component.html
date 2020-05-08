@@ -1,0 +1,92 @@
+<section class="page-admin-section">
+  <div class="container">
+    <div class="text-title text-center text-nunito p-4">
+      Admin Page - Edit Weekly Menu
+    </div>
+    <div class="edit-weekly p-2">
+      <div class="row">
+        <div class="col-md-6">
+          <form [formGroup]="ulamForm1" class="add-ulam-form">
+            <div class="form-group">
+              <label for="weekName">Weekly Ala Carte for Week</label>
+              <input type="text" formControlName="weekName" class="form-control" id="weekName"
+                aria-describedby="weekName" placeholder="Date">
+            </div>
+            <div class="form-group">
+              <label for="ulamImage">Image URL1</label>
+              <input type="text" formControlName="ulamImage" class="form-control" id="ulamImage"
+                aria-describedby="ulamImage" placeholder="Image URL">
+            </div>
+            <div class="form-group">
+              <label for="ulamName">Name1</label>
+              <input type="text" formControlName="ulamName" class="form-control" id="ulamName"
+                aria-describedby="ulamName" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="ulamPrice">Price1</label>
+              <input type="text" formControlName="ulamPrice" class="form-control" id="ulamPrice"
+                aria-describedby="ulamPrice" placeholder="$$$$.$$">
+            </div>
+            <div class="form-group">
+              <label for="ulamSize">Size1</label>
+              <input type="text" formControlName="ulamSize" class="form-control" id="ulamSize"
+                aria-describedby="ulamSize" placeholder="32oz, etc">
+            </div>
+          </form>
+          <hr>
+          <hr>
+          <form [formGroup]="ulamForm2" class="add-ulam-form">
+            <div class="form-group">
+              <label for="ulamImage">Image URL2</label>
+              <input type="text" formControlName="ulamImage" class="form-control" id="ulamImage"
+                aria-describedby="ulamImage" placeholder="Image URL">
+            </div>
+            <div class="form-group">
+              <label for="ulamName">Name2</label>
+              <input type="text" formControlName="ulamName" class="form-control" id="ulamName"
+                aria-describedby="ulamName" placeholder="Name2">
+            </div>
+            <div class="form-group">
+              <label for="ulamPrice">Price2</label>
+              <input type="text" formControlName="ulamPrice" class="form-control" id="ulamPrice"
+                aria-describedby="ulamPrice" placeholder="$$$$.$$">
+            </div>
+            <div class="form-group">
+              <label for="ulamSize">Size2</label>
+              <input type="text" formControlName="ulamSize" class="form-control" id="ulamSize"
+                aria-describedby="ulamSize" placeholder="32oz, etc">
+            </div>
+          </form>
+          <button class="btn btn-primary btn-block m-1">Submit</button>
+          <button class="btn btn-danger btn-block m-1" (click)="clearForms()">Clear Form</button>
+        </div>
+
+        <div class="col-md-6 preview-section">
+          <h4 class="this-week-text text-nunito text-center p-3">Weekly A La Carte Menu for
+            {{ulamForm1.value.weekName}}:</h4>
+          <div class="row text-nunito weekly-menu">
+            <div class="col-md-6 text-center p-1">
+              <div class="card text-center">
+                <img class="card-img-top" src={{ulamForm1.value.ulamImage}} alt="image here" class="img-fluid">
+                <div class="card-body">
+                  <p class="card-text">{{ulamForm1.value.ulamName}}</p>
+                  <h5 class="card-title">{{ulamForm1.value.ulamPrice}}, {{ulamForm1.value.ulamSize}}</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 text-center p-1">
+              <div class="card text-center">
+                <img class="card-img-top" src={{ulamForm2.value.ulamImage}} alt="image here" class="img-fluid">
+                <div class="card-body">
+                  <p class="card-text">{{ulamForm2.value.ulamName}}</p>
+                  <h5 class="card-title">{{ulamForm2.value.ulamPrice}}, {{ulamForm2.value.ulamSize}}</h5>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

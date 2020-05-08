@@ -5,6 +5,7 @@ import{ PageSingleTrayMenuComponent} from '../app/components/page-single-tray-me
 import{ PageCateringMenuComponent} from '../app/components/page-catering-menu/page-catering-menu.component';
 import{ PageGalleryComponent} from '../app/components/page-gallery/page-gallery.component';
 import{ PageContactUsComponent} from '../app/components/page-contact-us/page-contact-us.component';
+import{ PageAdminComponent} from '../app/components/page-admin/page-admin.component';
 import{ PageNotfoundComponent} from '../app/components/page-notfound/page-notfound.component';
 
 
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: "catering-menu", component: PageCateringMenuComponent},
   { path: "gallery", component: PageGalleryComponent},
   { path: "contact-us", component: PageContactUsComponent},
+  { path: "admin", component: PageAdminComponent},
   {path: '**',component: PageNotfoundComponent}
 ];
 
