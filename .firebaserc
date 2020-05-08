@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mamaflorieskitchen": {
+      "hosting": {
+        "mommyflorieskitchen": [
+          "mamaflorieskitchen"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mamaflorieskitchen"
+  }
+}

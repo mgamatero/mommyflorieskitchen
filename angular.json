@@ -127,8 +127,13 @@
               "devServerTarget": "mommyflorieskitchen:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "mommyflorieskitchen"
 }
