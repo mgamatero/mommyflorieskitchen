@@ -3,20 +3,20 @@
     <div class="catering-section-text">
     <div class="row catering-section-text">
       <div class="col-md-6">
-        <p class="catering-section-text-title">We specialize in catering requests</p>
-        <div class="text-left">
+        <button class="btn btn-info btn-lg" [routerLink]="['catering-menu']">View our Catering Menu</button>
+        <h3 class="catering-section-text-title p-2">We specialize in catering requests</h3>
+        <div class="text-center">
           <div>- Small parties</div>
           <div>- Big parties</div>
           <div>- Formal events</div>
           <div>- Holidays</div>
           <div>- Get togethers</div>
         </div>
-          <button class="btn btn-info btn-lg" [routerLink]="['catering-menu']">View our Catering Menu</button>
       </div>
       <div class="col-md-6">
-        <p class="catering-section-text-title">But we also take requests for single trays!</p>
+        <button class="btn btn-warning btn-lg" [routerLink]="['single-tray-menu']">View our Single Tray Menu</button>
+        <h3 class="catering-section-text-title p-2">But we also take requests for single trays!</h3>
         <div>- No order is too small</div>
-          <button class="btn btn-warning btn-lg" [routerLink]="['single-tray-menu']">View our Single Tray Menu</button>
       </div>
     </div>
   </div>

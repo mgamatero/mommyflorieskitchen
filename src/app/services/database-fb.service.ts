@@ -15,11 +15,13 @@ export class DatabaseFBService {
 
   constructor(public db:AngularFirestore) { }
 
-  dbRetrieveText(){
-    return this.db.collection('weeklytext').snapshotChanges();
+ retrieveWeekDateText(){
+    return this.db.collection('weeklytext').doc('text').snapshotChanges();
   }
 
-
+ retrieveUlam(docName){
+    return this.db.collection('weeklyulam').doc(docName).snapshotChanges();
+  }
 
 
    //------------------------------  add Text ---------------------------------------

@@ -1,21 +1,23 @@
 <section class="this-week p-4">
   <div class="container">
 
-        <h4 class="this-week-text text-nunito text-center p-3">Weekly A La Carte Menu for {{weeklyDate$[0].text}}:</h4>
+        <h4 class="this-week-text text-nunito text-center p-3">Weekly A La Carte Menu for {{weeklyDate$.ulamDate}}:</h4>
     <div class="row text-nunito weekly-menu">
       <div class="col-md-6 text-center p-1">
         <div class="card" >
-          <img class="card-img-top" src="../../../../assets/images/bulalobistek.jpg" alt="bulalobistek" class="img-fluid">
+          <img class="card-img-top" src={{ulam1$.ulamImage}} alt="ulamImage" class="img-fluid">
           <div class="card-body">
-            <p class="card-text">Bulalo Bistek</p>
+            <div class="card-text">{{ulam1$.ulamName}}</div>
+            <div class="card-text">{{ulam2$.ulamPrice}}, {{ulam2$.ulamSize}}</div>
           </div>
         </div>
       </div>
       <div class="col-md-6 text-center p-1">
         <div class="card" >
-          <img class="card-img-top" src="../../../../assets/images/pakbet.jpg" alt="pakbet" class="img-fluid">
+          <img class="card-img-top" src={{ulam2$.ulamImage}} alt="ulamImage" class="img-fluid">
           <div class="card-body">
-            <p class="card-text">Pakbet</p>
+            <div class="card-text">{{ulam2$.ulamName}}</div>
+            <div class="card-text">{{ulam2$.ulamPrice}}, {{ulam2$.ulamSize}}</div>
           </div>
         </div>
       </div>
@@ -23,7 +25,7 @@
 <div class="row text-center align-center">
 
   <div class="col">
-    <button type="button" class="btn btn-primary btn-block btn-lg my-3">Order now!</button>
+    <button type="button" class="btn btn-primary btn-block btn-lg my-3" [routerLink]="['contact-us']">Order now!</button>
 
   </div>
 </div>

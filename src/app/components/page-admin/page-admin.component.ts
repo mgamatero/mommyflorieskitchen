@@ -47,7 +47,6 @@ export class PageAdminComponent implements OnInit {
   }
 
   addFromForm(){
-
     this.dbService.addUlam(this.ulamForm1.value,'ulam1');
     this.dbService.addUlam(this.ulamForm2.value,'ulam2');
     this.dbService.addText(this.ulamTextForm.value);
