@@ -16,6 +16,8 @@ import { PageCateringMenuComponent } from './components/page-catering-menu/page-
 import { PageSingleTrayMenuComponent } from './components/page-single-tray-menu/page-single-tray-menu.component';
 import { PageGalleryComponent } from './components/page-gallery/page-gallery.component';
 import { CateringComponent } from './components/page-landing/catering/catering.component';
+import { ContactInfoComponent } from './components/page-landing/contact-info/contact-info.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { CateringComponent } from './components/page-landing/catering/catering.c
     PageCateringMenuComponent,
     PageSingleTrayMenuComponent,
     PageGalleryComponent,
-    CateringComponent
+    CateringComponent,
+    ContactInfoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
