@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
@@ -29,6 +29,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import {DatabaseFBService} from './services/database-fb.service';
 import { PageAdminComponent } from './components/page-admin/page-admin.component';
+import { LoginComponent } from './admin/login/login.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { PageAdminComponent } from './components/page-admin/page-admin.component
     CateringComponent,
     ContactInfoComponent,
     FooterComponent,
-    PageAdminComponent
+    PageAdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

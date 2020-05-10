@@ -7,6 +7,7 @@ import{ PageGalleryComponent} from '../app/components/page-gallery/page-gallery.
 import{ PageContactUsComponent} from '../app/components/page-contact-us/page-contact-us.component';
 import{ PageAdminComponent} from '../app/components/page-admin/page-admin.component';
 import{ PageNotfoundComponent} from '../app/components/page-notfound/page-notfound.component';
+import{ LoginComponent} from '../app/admin/login/login.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: "gallery", component: PageGalleryComponent},
   { path: "contact-us", component: PageContactUsComponent},
   { path: "admin", component: PageAdminComponent},
+  { path: "admin/login", component: LoginComponent},
+
   {path: '**',component: PageNotfoundComponent}
 ];
 

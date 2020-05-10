@@ -24,6 +24,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" routerLink="admin/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="login()">Admin-Login</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Logoff</a>
+      </li>
      </ul>
   </div>
 </nav>

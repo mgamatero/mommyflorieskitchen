@@ -1,0 +1,25 @@
+<div class="container p-3">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-10 col-md-6">
+      <div class="card border-info card-login">
+        <div class="card-header">Admin Login</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="../../../assets/images/pancitmalabon.jpg" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+              <form [formGroup]="loginForm">
+                <input type="text" class="form-control mb-2" formControlName="email" placeholder="Email">
+                <input type="password" class="form-control mb-2" formControlName="password" placeholder="Password">
+                <!-- <input type="text" class="form-control mb-2" id="emailInput" placeholder="Email" required autofocus> -->
+                <!-- <input type="password" class="form-control mb-2" id="PasswordInput" placeholder="Password" required> -->
+                <button class="btn btn-lg btn-primary btn-block mb-1" type="submit" (click)="loginEmail()">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
