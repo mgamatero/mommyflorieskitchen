@@ -22,13 +22,13 @@
         <a class="nav-link" href="#" routerLink="contact-us" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Contact Us</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin</a>
+        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin Page</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#" routerLink="admin/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="login()">Admin-Login</a>
+        <a  *ngIf="!logStatus" class="nav-link" href="#" routerLink="admin/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Login</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Logoff</a>
+        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="logOut()">Admin-Logoff</a>
       </li>
      </ul>
   </div>

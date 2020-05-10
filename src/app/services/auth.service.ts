@@ -19,4 +19,12 @@ export class AuthService {
       );
     });
   }
+
+  emailLogout(){
+    this.afAuth.signOut();
+  }
+
+  isLogged(){
+    return this.afAuth.authState
+  }
 }
