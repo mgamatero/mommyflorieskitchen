@@ -24,6 +24,11 @@ export class DatabaseFBService {
   }
 
 
+ testretrieveUlam(){
+    return this.db.collection('testweeklyulam').snapshotChanges();
+  }
+
+
    //------------------------------  add Text ---------------------------------------
    addText(textFromForm: any) {
     // workaround for empty doc issue
@@ -51,4 +56,35 @@ export class DatabaseFBService {
         alert(`Ulam added`);
       });
   }
+
+   //------------------------------  add Ulam ---------------------------------------
+   testaddUlam(ulamFromForm) {
+    // workaround for empty doc issue
+    const id = this.db.createId();
+    this.db
+      .collection('testweeklyulam')
+      .doc(id)
+      .set(ulamFromForm as any)
+      .then(() => {
+        alert(`Ulam added`);
+      });
+  }
+
+    //-------------------------------- delete recipe --------------------------------------
+    testdeleteUlam(ulam) {
+      return this.db
+        .doc(`testweeklyulam/${ulam.id}`)
+        .delete()
+        .then(() => {
+          alert(`${ulam.ulamName} successfully deleted!`);
+        })
+        .catch((e) => {
+          alert('Error: ');
+        });
+    }
+
+    //  -------------------------------- get 1 dish based on ID -----------------------------
+    testgetDishByID(id:string){
+      return this.db.doc(`testweeklyulam/${id}`).snapshotChanges()
+    }
 }

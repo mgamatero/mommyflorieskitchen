@@ -14,16 +14,12 @@ import{DatabaseFBService} from '../../services/database-fb.service';
   styleUrls: ['./page-admin.component.css'],
 })
 export class PageAdminComponent implements OnInit {
-  // ulamTextForm: FormGroup;
+
   ulamForm: FormGroup;
-  // text: any;
+
   constructor(private formBuilder: FormBuilder, private dbService:DatabaseFBService) {}
 
   ngOnInit(): void {
-
-    // this.ulamTextForm = this.formBuilder.group({
-    //   ulamDate:['']
-    // })
 
     this.ulamForm = this.formBuilder.group({
       ulamName: [''],
@@ -38,7 +34,7 @@ export class PageAdminComponent implements OnInit {
   }
 
   addFromForm(){
-    this.dbService.addUlam(this.ulamForm.value);
+    this.dbService.testaddUlam(this.ulamForm.value);
     this.ulamForm.reset();
   }
 }

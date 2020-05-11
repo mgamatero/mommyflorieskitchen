@@ -31,6 +31,7 @@ import {DatabaseFBService} from './services/database-fb.service';
 import { PageAdminComponent } from './components/page-admin/page-admin.component';
 import { LoginComponent } from './admin/login/login.component';
 import { PageAdminEditComponent } from './components/page-admin-edit/page-admin-edit.component';
+import { PageAdmitEditActualDishComponent } from './components/page-admit-edit-actual-dish/page-admit-edit-actual-dish.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { PageAdminEditComponent } from './components/page-admin-edit/page-admin-
     FooterComponent,
     PageAdminComponent,
     LoginComponent,
-    PageAdminEditComponent
+    PageAdminEditComponent,
+    PageAdmitEditActualDishComponent
   ],
   imports: [
     BrowserModule,

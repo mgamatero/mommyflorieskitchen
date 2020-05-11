@@ -7,6 +7,7 @@ import{ PageGalleryComponent} from '../app/components/page-gallery/page-gallery.
 import{ PageContactUsComponent} from '../app/components/page-contact-us/page-contact-us.component';
 import{ PageAdminComponent} from '../app/components/page-admin/page-admin.component';
 import{ PageAdminEditComponent} from '../app/components/page-admin-edit/page-admin-edit.component';
+import{ PageAdmitEditActualDishComponent} from '../app/components/page-admit-edit-actual-dish/page-admit-edit-actual-dish.component';
 import{ PageNotfoundComponent} from '../app/components/page-notfound/page-notfound.component';
 import{ LoginComponent} from '../app/admin/login/login.component';
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: "contact-us", component: PageContactUsComponent},
   { path: "admin-add", component: PageAdminComponent},
   { path: "admin-edit", component: PageAdminEditComponent},
+  { path: "admin-edit/edit-actual-dish/:id", component: PageAdmitEditActualDishComponent},
   { path: "admin/login", component: LoginComponent},
 
   {path: '**',component: PageNotfoundComponent}
