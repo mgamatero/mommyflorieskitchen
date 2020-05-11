@@ -5,4 +5,10 @@ background-color: rgb(241, 243, 223);
 
 .preview-section{
   border:solid 3px green;
+  padding:1rem;
+}
+
+.add-ulam-form{
+  border:solid 2px black;
+  padding:1rem;
 }

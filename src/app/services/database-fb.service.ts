@@ -40,12 +40,12 @@ export class DatabaseFBService {
 
 
    //------------------------------  add Ulam ---------------------------------------
-   addUlam(ulamFromForm: any,docname:string) {
+   addUlam(ulamFromForm) {
     // workaround for empty doc issue
-    // const id = this.afs.createId();
+    const id = this.db.createId();
     this.db
       .collection('weeklyulam')
-      .doc(docname)
+      .doc(id)
       .set(ulamFromForm as any)
       .then(() => {
         alert(`Ulam added`);

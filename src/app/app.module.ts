@@ -30,6 +30,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {DatabaseFBService} from './services/database-fb.service';
 import { PageAdminComponent } from './components/page-admin/page-admin.component';
 import { LoginComponent } from './admin/login/login.component';
+import { PageAdminEditComponent } from './components/page-admin-edit/page-admin-edit.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { LoginComponent } from './admin/login/login.component';
     ContactInfoComponent,
     FooterComponent,
     PageAdminComponent,
-    LoginComponent
+    LoginComponent,
+    PageAdminEditComponent
   ],
   imports: [
     BrowserModule,

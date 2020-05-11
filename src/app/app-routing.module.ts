@@ -6,6 +6,7 @@ import{ PageCateringMenuComponent} from '../app/components/page-catering-menu/pa
 import{ PageGalleryComponent} from '../app/components/page-gallery/page-gallery.component';
 import{ PageContactUsComponent} from '../app/components/page-contact-us/page-contact-us.component';
 import{ PageAdminComponent} from '../app/components/page-admin/page-admin.component';
+import{ PageAdminEditComponent} from '../app/components/page-admin-edit/page-admin-edit.component';
 import{ PageNotfoundComponent} from '../app/components/page-notfound/page-notfound.component';
 import{ LoginComponent} from '../app/admin/login/login.component';
 
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: "catering-menu", component: PageCateringMenuComponent},
   { path: "gallery", component: PageGalleryComponent},
   { path: "contact-us", component: PageContactUsComponent},
-  { path: "admin", component: PageAdminComponent},
+  { path: "admin-add", component: PageAdminComponent},
+  { path: "admin-edit", component: PageAdminEditComponent},
   { path: "admin/login", component: LoginComponent},
 
   {path: '**',component: PageNotfoundComponent}
