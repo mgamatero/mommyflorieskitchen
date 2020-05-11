@@ -15,6 +15,8 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
   templateUrl: './page-admit-edit-actual-dish.component.html',
   styleUrls: ['./page-admit-edit-actual-dish.component.css'],
 })
+
+//PageAdmitEditActualDishComponent - page that actually edits ulam.  Pull data from fb, and able to write back on edit
 export class PageAdmitEditActualDishComponent implements OnInit {
   dishId: string;
   dishToUpdate$: any;
@@ -48,8 +50,6 @@ export class PageAdmitEditActualDishComponent implements OnInit {
       this.editUlamForm.get('ulamImage').setValue(this.dishToUpdate$.ulamImage);
       this.editUlamForm.get('ulamSize').setValue(this.dishToUpdate$.ulamSize);
     });
-
-
   }
 
   editDish() {

@@ -15,20 +15,20 @@ export class DatabaseFBService {
 
   constructor(public db:AngularFirestore) { }
 
+  //-----------------------Get Date from Firebase -----------------------------------
  retrieveWeekDateText(){
     return this.db.collection('weeklytext').doc('text').snapshotChanges();
   }
 
+  //----------------------Get all Ulams from Firebase--------------------------------
  retrieveUlam(){
     return this.db.collection('weeklyulam').snapshotChanges();
   }
 
 
-   //------------------------------  add Text ---------------------------------------
+   //----------- Add The Weekly Date (it really acts like an update, since .doc is always 'text') ---------------
    addText(textFromForm: any) {
-    // workaround for empty doc issue
-    // const id = this.afs.createId();
-    this.db
+      this.db
       .collection('weeklytext')
       .doc('text')
       .set(textFromForm as any)
@@ -39,7 +39,7 @@ export class DatabaseFBService {
 
 
 
-   //------------------------------  add Ulam ---------------------------------------
+   //------------------------- add Ulam ---------------------------------------
    addUlam(ulamFromForm) {
     // workaround for empty doc issue
     const id = this.db.createId();
@@ -54,7 +54,7 @@ export class DatabaseFBService {
   }
 
 
-    //-------------------------------- delete recipe --------------------------------------
+    //-------------------------------- delete Ulam --------------------------------------
     deleteUlam(ulam) {
       return this.db
         .doc(`weeklyulam/${ulam.id}`)
@@ -67,7 +67,7 @@ export class DatabaseFBService {
         });
     }
 
-    //  -------------------------------- get 1 dish based on ID -----------------------------
+    //  ---------------------------- get 1 dish based on ID -----------------------------
     getDishByID(id:string){
       return this.db.doc(`weeklyulam/${id}`).snapshotChanges()
     }

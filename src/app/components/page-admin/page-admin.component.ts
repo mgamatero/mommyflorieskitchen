@@ -13,6 +13,9 @@ import{DatabaseFBService} from '../../services/database-fb.service';
   templateUrl: './page-admin.component.html',
   styleUrls: ['./page-admin.component.css'],
 })
+
+
+// PageAdminComponent -- Used to Add new Ulams for thisweek section.  Writes data to Firebase
 export class PageAdminComponent implements OnInit {
 
   ulamForm: FormGroup;

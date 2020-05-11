@@ -14,9 +14,10 @@ import { DatabaseFBService } from '../../services/database-fb.service';
   templateUrl: './page-admin-edit.component.html',
   styleUrls: ['./page-admin-edit.component.css'],
 })
+
+// PageAdminEditComponent -- allows user to edit and delete ulams, also update weekly date text
 export class PageAdminEditComponent implements OnInit {
   ulamTextForm: FormGroup;
-  text: any;
   weeklyDate$:any;
   ulam$: any [];
 
@@ -32,9 +33,8 @@ export class PageAdminEditComponent implements OnInit {
     });
 
     this.dbService.retrieveWeekDateText().subscribe((text) => {
-      console.log(text.payload.data());
       this.weeklyDate$ = text.payload.data();
-
+//keep here, might be useful later
       // this.weeklyDate$ = text.map((e)=>{
       //   return{
       //     id:e.payload.doc.id,
