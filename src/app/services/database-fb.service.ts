@@ -19,8 +19,8 @@ export class DatabaseFBService {
     return this.db.collection('weeklytext').doc('text').snapshotChanges();
   }
 
- retrieveUlam(docName){
-    return this.db.collection('weeklyulam').doc(docName).snapshotChanges();
+ retrieveUlam(){
+    return this.db.collection('weeklyulam').snapshotChanges();
   }
 
 

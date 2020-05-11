@@ -28,7 +28,7 @@
         <a  *ngIf="!logStatus" class="nav-link" href="#" routerLink="admin/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Login</a>
       </li>
       <li class="nav-item active">
-        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="logOut()">Admin-Logoff</a>
+        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="logOut()">Admin-Logoff</a>
       </li>
      </ul>
   </div>

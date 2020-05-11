@@ -3,16 +3,16 @@
 
         <h4 *ngIf="weeklyDate$" class="this-week-text text-nunito text-center p-3">Weekly A La Carte Menu for {{weeklyDate$.ulamDate}}:</h4>
     <div class="row text-nunito weekly-menu">
-      <div class="col-md-6 text-center p-1">
-        <div class="card"  *ngIf="ulam1$">
-          <img class="card-img-top" src={{ulam1$.ulamImage}} alt="ulamImage" class="img-fluid">
+    <div *ngFor="let ulam of ulam$" class="col-md-6 text-center p-1">
+        <div class="card"  *ngIf="ulam">
+          <img class="card-img-top" src={{ulam.ulamImage}} alt="ulamImage" class="img-fluid">
           <div class="card-body">
-            <div class="card-text">{{ulam1$.ulamName}}</div>
-            <div class="card-text">{{ulam1$.ulamPrice}}, {{ulam1$.ulamSize}}</div>
+            <div class="card-text">{{ulam.ulamName}}</div>
+            <div class="card-text">{{ulam.ulamPrice}}, {{ulam.ulamSize}}</div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 text-center p-1">
+      <!-- <div class="col-md-6 text-center p-1">
         <div class="card" *ngIf="ulam2$">
           <img class="card-img-top" src={{ulam2$.ulamImage}} alt="ulamImage" class="img-fluid">
           <div class="card-body">
@@ -20,7 +20,7 @@
             <div class="card-text">{{ulam2$.ulamPrice}}, {{ulam2$.ulamSize}}</div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 <div class="row text-center align-center">
 
