@@ -1,1 +1,51 @@
-<p>page-admit-edit-actual-dish works!</p>
+<section class="page-admin-section">
+  <div class="container">
+    <div class="text-title text-center text-nunito p-4">
+      Admin Page - Edit Ulam
+    </div>
+    <div class="edit-weekly p-2">
+      <div class="row">
+        <div class="col-md-6">
+
+          <form [formGroup]="editUlamForm" class="edit-ulam-form">
+            <div class="form-group">
+              <label for="ulamImage">Image URL</label>
+              <input type="text" formControlName="ulamImage" class="form-control" id="ulamImage"
+                aria-describedby="ulamImage" placeholder="Image URL">
+            </div>
+            <div class="form-group">
+              <label for="ulamName">Ulam Name</label>
+              <input type="text" formControlName="ulamName" class="form-control" id="ulamName"
+                aria-describedby="ulamName" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="ulamPrice">Price</label>
+              <input type="text" formControlName="ulamPrice" class="form-control" id="ulamPrice"
+                aria-describedby="ulamPrice" placeholder="$$$$.$$">
+            </div>
+            <div class="form-group">
+              <label for="ulamSize">Size</label>
+              <input type="text" formControlName="ulamSize" class="form-control" id="ulamSize"
+                aria-describedby="ulamSize" placeholder="32oz, etc">
+            </div>
+          </form>
+          <button class="btn btn-primary btn-block m-1" (click)="editDish()">Submit</button>
+          <button class="btn btn-danger btn-block m-1" [routerLink]="['/admin-edit']">Cancel</button>
+        </div>
+
+        <div class="col-md-6 preview-section">
+              <div class="col-12 text-center p-1">
+              <div class="card text-center">
+                <img class="card-img-top" src={{editUlamForm.value.ulamImage}} alt="image here" class="img-fluid">
+                <div class="card-body">
+                  <h5 class="card-text">{{editUlamForm.value.ulamName}}</h5>
+                  <h5 class="card-title">{{editUlamForm.value.ulamPrice}} / {{editUlamForm.value.ulamSize}}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+

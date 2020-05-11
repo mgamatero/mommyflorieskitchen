@@ -18,6 +18,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 export class PageAdmitEditActualDishComponent implements OnInit {
   dishId: string;
   dishToUpdate$: any;
+  editUlamForm: FormGroup;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -26,21 +27,34 @@ export class PageAdmitEditActualDishComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    //form
+    this.editUlamForm = this.fb.group({
+      ulamName: [''],
+      ulamImage: [''],
+      ulamPrice: [''],
+      ulamSize: [''],
+    });
+
     //This is the id from params
     this.route.paramMap.subscribe((params: ParamMap) => {
       this.dishId = params.get('id');
     });
 
-    //get data by id
-    this.dbService.testgetDishByID(this.dishId).subscribe((data) => {
+    //get data by id and assign to form
+    this.dbService.getDishByID(this.dishId).subscribe((data) => {
       this.dishToUpdate$ = data.payload.data() as any;
+      this.editUlamForm.get('ulamName').setValue(this.dishToUpdate$.ulamName);
+      this.editUlamForm.get('ulamPrice').setValue(this.dishToUpdate$.ulamPrice);
+      this.editUlamForm.get('ulamImage').setValue(this.dishToUpdate$.ulamImage);
+      this.editUlamForm.get('ulamSize').setValue(this.dishToUpdate$.ulamSize);
     });
 
-    // this.recipeForm.get('name').setValue(this.indivRecipeToUpdate$.name);
-    // this.recipeForm
-    // .get('addedBy')
-    // .setValue(this.indivRecipeToUpdate$.addedBy);
-    // this.recipeForm.get('image').setValue(this.indivRecipeToUpdate$.image);
-    // this.recipeForm.get('type').setValue(this.indivRecipeToUpdate$.type);
+
+  }
+
+  editDish() {
+    this.dbService.updateDish(this.editUlamForm.value,this.dishId);
+    this.editUlamForm.reset();
+    this.router.navigate(['admin-edit/'])
   }
 }

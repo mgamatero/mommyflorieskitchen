@@ -34,7 +34,7 @@ export class PageAdminComponent implements OnInit {
   }
 
   addFromForm(){
-    this.dbService.testaddUlam(this.ulamForm.value);
+    this.dbService.addUlam(this.ulamForm.value);
     this.ulamForm.reset();
   }
 }

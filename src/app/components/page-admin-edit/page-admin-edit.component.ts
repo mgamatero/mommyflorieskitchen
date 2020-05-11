@@ -42,7 +42,7 @@ export class PageAdminEditComponent implements OnInit {
       //    })
     });
 
-    this.dbService.testretrieveUlam().subscribe((ulam) => {
+    this.dbService.retrieveUlam().subscribe((ulam) => {
            this.ulam$ = ulam.map((e) => {
         return {
           id: e.payload.doc.id,
@@ -51,14 +51,6 @@ export class PageAdminEditComponent implements OnInit {
       });
       console.log('ulam' ,this.ulam$)
     });
-
-
-
-
-
-
-
-
   }
 
   updateDate() {
@@ -67,7 +59,7 @@ export class PageAdminEditComponent implements OnInit {
 
   confirmDelete(ulam){
     if(confirm(`Are you sure you want to delete ${ulam.ulamName}?`)){
-      this.dbService.testdeleteUlam(ulam)
+      this.dbService.deleteUlam(ulam)
     }
   }
 

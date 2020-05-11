@@ -22,20 +22,20 @@
         <a class="nav-link" href="#" routerLink="contact-us" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Contact Us</a>
       </li>
       <li class="nav-item active">
-        <!-- <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin Page</a> -->
-        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin-add" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Add</a>
+        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin-add" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Add-Dish</a>
+        <!-- <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin-add" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Add</a> -->
       </li>
       <li class="nav-item active">
-        <!-- <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin Page</a> -->
-        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin-edit" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Edit</a>
+        <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin-edit" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Edit-Dish</a>
+        <!-- <a *ngIf="logStatus" class="nav-link" href="#" routerLink="admin-edit" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Edit</a> -->
       </li>
       <li class="nav-item active">
-        <!-- <a  *ngIf="!logStatus" class="nav-link" href="#" routerLink="admin/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Login</a> -->
         <a  *ngIf="!logStatus" class="nav-link" href="#" routerLink="admin/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Login</a>
+        <!-- <a  *ngIf="!logStatus" class="nav-link" href="#" routerLink="admin/login" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">Admin-Login</a> -->
       </li>
       <li class="nav-item active">
-        <!-- <a *ngIf="logStatus" class="nav-link" href="#" routerLink="" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="logOut()">Admin-Logoff</a> -->
         <a *ngIf="logStatus" class="nav-link" href="#" routerLink="" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="logOut()">Admin-Logoff</a>
+        <!-- <a *ngIf="logStatus" class="nav-link" href="#" routerLink="" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}" (click)="logOut()">Admin-Logoff</a> -->
       </li>
      </ul>
   </div>

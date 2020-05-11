@@ -23,12 +23,9 @@ export class LoginComponent implements OnInit {
   }
 
   loginEmail() {
-    console.log(this.loginForm.value.email);
-    console.log(this.loginForm.value.password);
     this.afAuth
       .emailLogin(this.loginForm.value.email, this.loginForm.value.password)
-      // .signInWithEmailAndPassword(this.email, this.password)
-      .then(success => {
+          .then(success => {
      alert('Welcome Pat & Bea')
         this.router.navigate(["/"]);
       })

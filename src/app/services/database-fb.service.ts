@@ -24,11 +24,6 @@ export class DatabaseFBService {
   }
 
 
- testretrieveUlam(){
-    return this.db.collection('testweeklyulam').snapshotChanges();
-  }
-
-
    //------------------------------  add Text ---------------------------------------
    addText(textFromForm: any) {
     // workaround for empty doc issue
@@ -48,6 +43,7 @@ export class DatabaseFBService {
    addUlam(ulamFromForm) {
     // workaround for empty doc issue
     const id = this.db.createId();
+
     this.db
       .collection('weeklyulam')
       .doc(id)
@@ -57,23 +53,11 @@ export class DatabaseFBService {
       });
   }
 
-   //------------------------------  add Ulam ---------------------------------------
-   testaddUlam(ulamFromForm) {
-    // workaround for empty doc issue
-    const id = this.db.createId();
-    this.db
-      .collection('testweeklyulam')
-      .doc(id)
-      .set(ulamFromForm as any)
-      .then(() => {
-        alert(`Ulam added`);
-      });
-  }
 
     //-------------------------------- delete recipe --------------------------------------
-    testdeleteUlam(ulam) {
+    deleteUlam(ulam) {
       return this.db
-        .doc(`testweeklyulam/${ulam.id}`)
+        .doc(`weeklyulam/${ulam.id}`)
         .delete()
         .then(() => {
           alert(`${ulam.ulamName} successfully deleted!`);
@@ -84,7 +68,16 @@ export class DatabaseFBService {
     }
 
     //  -------------------------------- get 1 dish based on ID -----------------------------
-    testgetDishByID(id:string){
-      return this.db.doc(`testweeklyulam/${id}`).snapshotChanges()
+    getDishByID(id:string){
+      return this.db.doc(`weeklyulam/${id}`).snapshotChanges()
+    }
+    updateDish(ulam:any,id:string){
+        this.db
+        .collection('weeklyulam')
+        .doc(id)
+        .set(ulam as any)
+        .then(() => {
+          alert(`${ulam.ulamName} updated`);
+         })
     }
 }

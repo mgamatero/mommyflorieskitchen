@@ -15,34 +15,10 @@
             </div>
             <button class="btn btn-primary btn-block m-1" (click)="updateDate()">Update Date</button>
           </form>
-          <!-- <form [formGroup]="ulamForm" class="add-ulam-form">
-            <div class="form-group">
-              <label for="ulamImage">Image URL</label>
-              <input type="text" formControlName="ulamImage" class="form-control" id="ulamImage"
-                aria-describedby="ulamImage" placeholder="Image URL">
-            </div>
-            <div class="form-group">
-              <label for="ulamName">Ulam Name</label>
-              <input type="text" formControlName="ulamName" class="form-control" id="ulamName"
-                aria-describedby="ulamName" placeholder="Name">
-            </div>
-            <div class="form-group">
-              <label for="ulamPrice">Price</label>
-              <input type="text" formControlName="ulamPrice" class="form-control" id="ulamPrice"
-                aria-describedby="ulamPrice" placeholder="$$$$.$$">
-            </div>
-            <div class="form-group">
-              <label for="ulamSize">Size</label>
-              <input type="text" formControlName="ulamSize" class="form-control" id="ulamSize"
-                aria-describedby="ulamSize" placeholder="32oz, etc">
-            </div>
-          </form> -->
-          <!-- <button class="btn btn-primary btn-block m-1" (click)="addFromForm()">Submit</button>
-          <button class="btn btn-danger btn-block m-1" (click)="clearForms()">Clear Form</button> -->
         </div>
 
         <div class="col-md-6 preview-section">
-          <h4 class="this-week-text text-nunito text-center p-3">Weekly A La Carte Menu for
+          <h4 class="this-week-text text-nunito text-center p-3" *ngIf="weeklyDate$">Weekly A La Carte Menu for
             {{weeklyDate$.ulamDate}}:</h4>
           <div class="row text-nunito weekly-menu">
             <div *ngFor="let ulam of ulam$" class="col-md-6 text-center p-1">
