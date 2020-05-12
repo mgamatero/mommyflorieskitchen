@@ -18,13 +18,13 @@ import { DatabaseFBService } from '../../services/database-fb.service';
 // PageAdminEditComponent -- allows user to edit and delete ulams, also update weekly date text
 export class PageAdminEditComponent implements OnInit {
   ulamTextForm: FormGroup;
-  weeklyDate$:any;
-  ulam$: any [];
+  weeklyDate$: any;
+  ulam$: any[];
 
   constructor(
     private formBuilder: FormBuilder,
     private dbService: DatabaseFBService,
-    private router:Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,7 +34,7 @@ export class PageAdminEditComponent implements OnInit {
 
     this.dbService.retrieveWeekDateText().subscribe((text) => {
       this.weeklyDate$ = text.payload.data();
-//keep here, might be useful later
+      //keep here, might be useful later
       // this.weeklyDate$ = text.map((e)=>{
       //   return{
       //     id:e.payload.doc.id,
@@ -43,13 +43,13 @@ export class PageAdminEditComponent implements OnInit {
     });
 
     this.dbService.retrieveUlam().subscribe((ulam) => {
-           this.ulam$ = ulam.map((e) => {
+      this.ulam$ = ulam.map((e) => {
         return {
           id: e.payload.doc.id,
           ...(e.payload.doc.data() as any),
         } as any;
       });
-      console.log('ulam' ,this.ulam$)
+      console.log('ulam', this.ulam$);
     });
   }
 
@@ -57,16 +57,14 @@ export class PageAdminEditComponent implements OnInit {
     this.dbService.addText(this.ulamTextForm.value);
   }
 
-  confirmDelete(ulam){
-    if(confirm(`Are you sure you want to delete ${ulam.ulamName}?`)){
-      this.dbService.deleteUlam(ulam)
+  confirmDelete(ulam) {
+    if (confirm(`Are you sure you want to delete ${ulam.ulamName}?`)) {
+      this.dbService.deleteUlam(ulam);
     }
   }
 
-  editDish(id){
-    console.log(id)
-    this.router.navigate(['/admin-edit/edit-actual-dish',id])
+  editDish(id) {
+    console.log(id);
+    this.router.navigate(['/admin-edit/edit-actual-dish', id]);
   }
-
-
 }
