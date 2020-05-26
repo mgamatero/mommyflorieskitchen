@@ -31,6 +31,7 @@ import { PageAdminComponent } from './components/page-admin/page-admin.component
 import { LoginComponent } from './admin/login/login.component';
 import { PageAdminEditComponent } from './components/page-admin-edit/page-admin-edit.component';
 import { PageAdmitEditActualDishComponent } from './components/page-admit-edit-actual-dish/page-admit-edit-actual-dish.component';
+import { TestimonialsComponent } from './components/page-landing/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { PageAdmitEditActualDishComponent } from './components/page-admit-edit-a
     PageAdminComponent,
     LoginComponent,
     PageAdminEditComponent,
-    PageAdmitEditActualDishComponent
+    PageAdmitEditActualDishComponent,
+    TestimonialsComponent
   ],
   imports: [
     BrowserModule,
