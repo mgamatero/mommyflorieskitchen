@@ -29,6 +29,11 @@
                 <div class="card-body">
                   <div class="card-text">{{ulam.ulamName}}</div>
                   <div class="card-text">{{ulam.ulamPrice}}, {{ulam.ulamSize}}</div>
+                  <div *ngIf=ulam.soldOut class="sold-out">
+                    <div class="sold-out-text">
+                      SOLD OUT
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

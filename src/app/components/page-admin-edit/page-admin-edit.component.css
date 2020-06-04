@@ -1,3 +1,9 @@
 .preview-section{
   border: rgb(255, 145, 0) solid 2px;
 }
+
+.sold-out{
+  background-color:rgba(255, 0, 0, 0.699);
+  color:rgb(248, 247, 247);
+    top: 50%;
+}
