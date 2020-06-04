@@ -32,10 +32,10 @@
               <label for="ulamSize">Sold Out</label>
             <div class="row text-center">
               <div class="col">
-                <div class="btn btn-success" (click)="clickNotSoldOut()">Available</div>
+                <button class="btn btn-success" (click)="clickNotSoldOut()" [disabled]="!editUlamForm.value.soldOut">Available</button>
               </div>
               <div class="col">
-                <div class="btn btn-danger" (click)="clickSoldOut()">Sold Out</div>
+                <button class="btn btn-danger" (click)="clickSoldOut()" [disabled]="editUlamForm.value.soldOut">Sold Out</button>
               </div>
             </div>
             </div>
@@ -52,11 +52,11 @@
                   <h5 class="card-text">{{editUlamForm.value.ulamName}}</h5>
                   <h5 class="card-title">{{editUlamForm.value.ulamPrice}} / {{editUlamForm.value.ulamSize}}</h5>
                   <!-- <div *ngIf=editUlamForm.value.soldOut class="sold-out"> -->
-                  <div *ngIf="editUlamForm.value.soldOut" class="sold-out">
+                  <h3 *ngIf="editUlamForm.value.soldOut" class="sold-out">
                     <div class="sold-out-text">
                       SOLD OUT
                     </div>
-                  </div>
+                  </h3>
                 </div>
               </div>
             </div>

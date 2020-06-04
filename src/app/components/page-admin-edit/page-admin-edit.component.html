@@ -23,8 +23,14 @@
           <div class="row text-nunito weekly-menu">
             <div *ngFor="let ulam of ulam$" class="col-md-6 text-center p-1">
               <div class="card" *ngIf="ulam">
-                <button class="btn btn-warning btn-sm" (click)="editDish(ulam.id)">Edit</button>
-                <button class="btn btn-danger btn-sm" (click)="confirmDelete(ulam)">Delete</button>
+                <div class="row">
+                  <div class="col">
+                    <button class="btn btn-warning btn-block mt-3" (click)="editDish(ulam.id)">Edit</button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-danger btn-block mt-3" (click)="confirmDelete(ulam)">Delete</button>
+                  </div>
+                </div>
                 <img class="card-img-top" src={{ulam.ulamImage}} alt="ulamImage" class="img-fluid">
                 <div class="card-body">
                   <div class="card-text">{{ulam.ulamName}}</div>
