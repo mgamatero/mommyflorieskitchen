@@ -14,6 +14,7 @@ export class ThisWeekComponent implements OnInit {
   weeklyDate$: any;
   ulam$: any[];
 
+
   constructor(private db: DatabaseFBService) {}
 
   ngOnInit(): void {

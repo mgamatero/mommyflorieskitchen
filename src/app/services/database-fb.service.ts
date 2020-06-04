@@ -22,7 +22,7 @@ export class DatabaseFBService {
 
   //----------------------Get all Ulams from Firebase--------------------------------
  retrieveUlam(){
-    return this.db.collection('weeklyulam').snapshotChanges();
+    return this.db.collection('weeklyulam', (ref)=>ref.orderBy('soldOut')).snapshotChanges();
   }
 
 

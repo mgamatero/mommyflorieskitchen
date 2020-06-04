@@ -6,3 +6,10 @@
   /* background-color: cornsilk; */
   text-align: center;
 }
+
+
+.sold-out{
+  background-color:rgba(255, 0, 0, 0.699);
+  color:rgb(248, 247, 247);
+    top: 50%;
+}
