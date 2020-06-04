@@ -1,9 +1,7 @@
-.header-pic {
-  /* Add the blur effect */
-  /* filter: blur(4px);
-  -webkit-filter: blur(4px); */
+.header-section{
+}
 
-  /* filter: grayscale(90%); */
+.header-pic {
   position: relative;
 }
 
@@ -21,9 +19,6 @@
   border: rgb(245, 241, 241) solid 0.2px;
   background-color: rgba(245, 241, 241,.8);
   box-shadow: 0px 0px 10px 10px rgb(245, 241, 241);
-  /* border: rgb(216, 201, 201) solid 0.2px;
-  background-color: rgb(216, 201, 201); */
-  /* box-shadow: 0px 0px 10px 10px rgb(216, 201, 201); */
 }
 
 
