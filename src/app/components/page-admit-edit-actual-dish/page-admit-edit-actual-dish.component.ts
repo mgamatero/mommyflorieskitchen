@@ -20,6 +20,7 @@ import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 export class PageAdmitEditActualDishComponent implements OnInit {
   dishId: string;
   dishToUpdate$: any;
+  soldOut:boolean;
   editUlamForm: FormGroup;
   constructor(
     private route: ActivatedRoute,
@@ -35,6 +36,7 @@ export class PageAdmitEditActualDishComponent implements OnInit {
       ulamImage: [''],
       ulamPrice: [''],
       ulamSize: [''],
+      soldOut:['']
     });
 
     //This is the id from params
@@ -49,8 +51,26 @@ export class PageAdmitEditActualDishComponent implements OnInit {
       this.editUlamForm.get('ulamPrice').setValue(this.dishToUpdate$.ulamPrice);
       this.editUlamForm.get('ulamImage').setValue(this.dishToUpdate$.ulamImage);
       this.editUlamForm.get('ulamSize').setValue(this.dishToUpdate$.ulamSize);
+      this.editUlamForm.get('soldOut').setValue(this.dishToUpdate$.soldOut);
+
+      console.log('Constructor ---> ' +  this.editUlamForm.get('soldOut').value )
     });
   }
+
+  clickSoldOut(){
+    // this.dishToUpdate$.sold = 'true';
+    this.editUlamForm.get('soldOut').setValue(true);
+    console.log('sold out ---> ' +  this.editUlamForm.get('soldOut').value )
+    // this.soldOut = this.editUlamForm.get('soldOut').value
+  }
+
+  clickNotSoldOut(){
+    // this.dishToUpdate$.sold ='false';
+    this.editUlamForm.get('soldOut').setValue(false);
+    console.log('sold out ---> ' +  this.editUlamForm.get('soldOut').value )
+    // this.soldOut = this.editUlamForm.get('soldOut').value
+  }
+
 
   editDish() {
     this.dbService.updateDish(this.editUlamForm.value,this.dishId);
