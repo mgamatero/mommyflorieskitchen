@@ -29,6 +29,7 @@ export class PageAdminComponent implements OnInit {
       ulamImage: [''],
       ulamPrice: [''],
       ulamSize: [''],
+      soldOut:[false]
     });
      }
 
